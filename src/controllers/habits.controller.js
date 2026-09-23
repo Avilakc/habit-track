@@ -8,14 +8,22 @@ export async function list(req, res, next) {
       orderBy: { createdAt: "asc" },
     });
 
-    const habitsWithStreak = habits.map((habit) => ({
-      id: habit.id,
-      name: habit.name,
-      icon: habit.icon,
-      color: habit.color,
-      isPredefined: habit.isPredefined,
-      streak: calculateStreak(habit.logs.map((log) => log.date)),
-    }));
+    const habitsWithStreak = habits.map((habit) => {
+      const todayString = new Date().toISOString().split("T")[0];
+      const doneToday = habit.logs.some(
+        (log) => log.date.toISOString().split("T")[0] === todayString,
+      );
+
+      return {
+        id: habit.id,
+        name: habit.name,
+        icon: habit.icon,
+        color: habit.color,
+        isPredefined: habit.isPredefined,
+        streak: calculateStreak(habit.logs.map((log) => log.date)),
+        doneToday,
+      };
+    });
 
     res.json(habitsWithStreak);
   } catch (err) {
