@@ -12,3 +12,13 @@ export const createHabitSchema = z.object({
 export const createLogSchema = z.object({
   date: z.iso.date("Date must be in YYYY-MM-DD format"),
 });
+
+export const listLogsQuerySchema = z
+  .object({
+    from: z.iso.date("from must be in YYYY-MM-DD format"),
+    to: z.iso.date("to must be in YYYY-MM-DD format"),
+  })
+  .refine((query) => query.from <= query.to, {
+    message: "from must be before or equal to to",
+    path: ["to"],
+  });
