@@ -45,17 +45,8 @@ export async function create(req, res, next) {
 
 export async function remove(req, res, next) {
   try {
-    const habit = await prisma.habit.findUniqueOrThrow({
-      where: { id: req.params.id },
-    });
-
-    if (habit.isPredefined) {
-      return res
-        .status(403)
-        .json({ error: "Predefined habits cannot be deleted" });
-    }
-
-    await prisma.habit.delete({ where: { id: habit.id } });
+    // Logs are removed automatically by the database (onDelete: Cascade)
+    await prisma.habit.delete({ where: { id: req.params.id } });
 
     res.status(204).send();
   } catch (err) {
