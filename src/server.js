@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 import "dotenv/config";
 import app from "./app.js";
 

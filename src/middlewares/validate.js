@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 export function validate(schema) {
   return (req, res, next) => {
     try {

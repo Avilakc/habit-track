@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 export function calculateStreak(dates) {
   if (dates.length === 0) return 0;
 

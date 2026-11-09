@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 import { getStoicQuote } from "../lib/stoicQuotesClient.js";
 
 export async function getQuote(req, res, next) {

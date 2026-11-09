@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 const STOIC_QUOTE_API_URL = "https://stoic.tekloon.net/stoic-quote";
 
 export async function getStoicQuote() {

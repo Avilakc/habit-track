@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 import { ZodError } from "zod";
 
 export function errorHandler(err, req, res, _next) {

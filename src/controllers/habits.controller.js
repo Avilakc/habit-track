@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 import prisma from "../lib/prisma.js";
 import { calculateStreak } from "../lib/streak.js";
 

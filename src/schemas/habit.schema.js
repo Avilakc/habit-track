@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 import { z } from "zod";
 
 export const createHabitSchema = z.object({

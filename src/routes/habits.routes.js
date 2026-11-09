@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 import { Router } from 'express';
 import * as habitsController from '../controllers/habits.controller.js';
 import { validate } from '../middlewares/validate.js';

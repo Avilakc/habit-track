@@ -1,3 +1,5 @@
+// AI assistance: Claude (Anthropic) reviewed this code and helped fix bugs where needed.
+
 import { Router } from "express";
 import habitsRoutes from "./habits.routes.js";
 import quoteRoutes from "./quote.routes.js";
